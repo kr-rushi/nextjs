@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const EventsCatPage =({data,pageName})=>{
+const EventsCatPage =({data,pageName}:{data:any,pageName:any})=>{
     return <div>
         <h1>{pageName}</h1>
         {data.map((ev)=>(
