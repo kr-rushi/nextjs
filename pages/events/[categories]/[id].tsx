@@ -3,7 +3,7 @@ import { useRef } from "react"
 
 const EventPage =()=>{
     const inputEmail=useRef()
-    const onSubmit=async(e)=>{
+    const onSubmit=async(e:any)=>{
           e.preventDefault()
           const emailValue=inputEmail?.current.value
           const eventId=router?.query.id
