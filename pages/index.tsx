@@ -9,7 +9,7 @@ import { Header } from "@/src/components/header/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({data}) {
+export default function Home({data}:{data:any}) {
   return (
     <>
       <Head>
