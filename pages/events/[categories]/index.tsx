@@ -4,7 +4,7 @@ import Link from 'next/link';
 const EventsCatPage =({data,pageName}:{data:any,pageName:any})=>{
     return <div>
         <h1>{pageName}</h1>
-        {data.map((ev)=>(
+        {data.map((ev:any)=>(
     <Link key={ev.id} href={`/events/${ev.city}/${ev.id}`} > 
     
         <Image width={300} height={300} alt='' src={ev.image}/>
@@ -18,7 +18,7 @@ export default EventsCatPage;
 
 export async function getStaticPaths(){
     const {events_categories}=await import('../../../data/data.json')
-const allPaths=events_categories.map(ev=>{
+const allPaths=events_categories.map((ev:any)=>{
 
     return{
         
@@ -34,7 +34,7 @@ return{
 }
 }
 
-export async function getStaticProps(context){
+export async function getStaticProps(context:any){
     const id=context?.params.categories;
     const{allEvents}=await import('../../../data/data.json')
     const data=allEvents.filter(ev=>ev.city===id)
