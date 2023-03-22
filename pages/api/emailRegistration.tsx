@@ -1,4 +1,4 @@
-export default function handler(req,res){
+export default function handler(req:any,res:any){
    const{method}=req
    if(method==='POST'){
     const {email,eventId}=req.body;
