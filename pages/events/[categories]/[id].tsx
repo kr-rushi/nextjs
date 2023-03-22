@@ -2,10 +2,12 @@ import { useRouter } from "next/router"
 import { useRef } from "react"
 
 const EventPage =()=>{
-    const inputEmail=useRef()
+    const inputEmail=useRef<HTMLInputElement | null>()
     const onSubmit=async(e:any)=>{
           e.preventDefault()
-          const emailValue=inputEmail?.current.value
+          let emailValue=''
+          if(inputEmail?.current){
+          emailValue=inputEmail?.current.value}
           const eventId=router?.query.id
           try {
             const response=await fetch('/api/emailRegistration',{
