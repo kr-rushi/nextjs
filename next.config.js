@@ -17,15 +17,15 @@ const nextConfig = {
       },
     ];
   },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: "/",
-  //       destination: "/about-us",
-  //       permanent: true,
-  //     },
-  //   ];
-  // },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/about-us",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
