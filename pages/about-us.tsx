@@ -1,6 +1,11 @@
+
+import { Footer } from "@/src/components/footer/footer";
+import { Header } from "@/src/components/header/header";
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
 const AboutsUsPage=()=>{
 return(
-    <div>
+    <div className={inter.className}>
     <h1>About Us Page</h1>
     <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -14,3 +19,12 @@ return(
 )
 }
 export default AboutsUsPage
+AboutsUsPage.getLayout=function PageLayout(page:any){
+    return(
+        <>
+        <Header/>
+        {page}
+        {/* <Footer/> */}
+        </>
+    )
+}

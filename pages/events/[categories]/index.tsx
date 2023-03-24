@@ -7,7 +7,7 @@ const EventsCatPage =({data,pageName}:{data:any,pageName:any})=>{
         {data.map((ev:any)=>(
     <Link key={ev.id} href={`/events/${ev.city}/${ev.id}`} > 
     
-        <Image width={300} height={300} alt='' src={ev.image}/>
+        <Image  width={300} height={300} alt='' src={ev.image}/>
     <h2>{ev.title}</h2>
     <p>{ev.description}</p>
  
